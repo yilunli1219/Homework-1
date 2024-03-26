@@ -28,13 +28,13 @@ interface IClassroomV2 {
 
 contract StudentV2 {
     function register() external view returns (uint256) {
-        if (ClassroomV2().isEnrolled == false){
-            IClassroomV2().enroll();
-            return 1000 ;
-        }
-        else{
-            return 123 ;
-        }
+        //if (ClassroomV2().isEnrolled == false){
+        //    IClassroomV2().enroll();
+        //    return 1000 ;
+       // }
+        //else{
+        //    return 123 ;
+       // }
 
          // TODO: please add your implementaiton here
     }
