@@ -28,7 +28,12 @@ interface IClassroomV2 {
 
 contract StudentV2 {
     function register() external view returns (uint256) {
-        //if (ClassroomV2().isEnrolled == false){
+        if (ClassroomV2(msg.sender).isEnrolled() == false){
+            return 1000;}
+        else{
+            return 123;
+
+        }
         //    IClassroomV2().enroll();
         //    return 1000 ;
        // }
@@ -43,6 +48,13 @@ contract StudentV2 {
 /* Problem 3 Interface & Contract */
 contract StudentV3 {
     function register() external view returns (uint256) {
+        uint256 gasEnd = gasleft();
+        if (gasEnd>=7100){
+            return 1000;}
+        else{
+            return 123;
+
+        }
         // TODO: please add your implementaiton here
     }
 }
